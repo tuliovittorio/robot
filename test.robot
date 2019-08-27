@@ -17,3 +17,9 @@ ${Browser}  chrome
 3. ใส่ Email-Password
    Input Text  name=username  buyer.toryod@gmail.com
    Input Text  name=password  Aa111111
+   Click Button  id=submit
+   Click Button  id=submit
+
+4. Search
+   wait until page contains element  //*[@id="search"]
+   Input Text  id=search  วิตามิน

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190826 16:08:37.834" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<robot rpa="false" generated="20190827 19:58:32.132" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
 <suite source="C:\Users\Jiradech\robot\test.robot" id="s1" name="Test">
 <test id="s1-t1" name="1. เปิดเว็บไซต์ google">
 <kw name="Open Browser" library="Selenium2Library">
@@ -8,10 +8,10 @@
 <arg>${url}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20190826 16:08:38.082" level="INFO">Opening browser 'chrome' to base url 'https://uat.taradtoryoddev.com/'.</msg>
-<status status="PASS" endtime="20190826 16:09:04.159" starttime="20190826 16:08:38.082"></status>
+<msg timestamp="20190827 19:58:32.655" level="INFO">Opening browser 'chrome' to base url 'https://uat.taradtoryoddev.com/'.</msg>
+<status status="PASS" endtime="20190827 19:58:57.426" starttime="20190827 19:58:32.655"></status>
 </kw>
-<status status="PASS" endtime="20190826 16:09:04.160" critical="yes" starttime="20190826 16:08:38.080"></status>
+<status status="PASS" endtime="20190827 19:58:57.436" critical="yes" starttime="20190827 19:58:32.652"></status>
 </test>
 <test id="s1-t2" name="2. คลิ๊กไปที่ Sign In">
 <kw name="Click Link" library="Selenium2Library">
@@ -19,10 +19,10 @@
 <arguments>
 <arg>xpath=/html/body/div[1]/div[1]/header/div[2]/div/div/div[3]/div[1]/div/div/div/div/a[1]</arg>
 </arguments>
-<msg timestamp="20190826 16:09:04.174" level="INFO">Clicking link 'xpath=/html/body/div[1]/div[1]/header/div[2]/div/div/div[3]/div[1]/div/div/div/div/a[1]'.</msg>
-<status status="PASS" endtime="20190826 16:09:07.498" starttime="20190826 16:09:04.174"></status>
+<msg timestamp="20190827 19:58:57.483" level="INFO">Clicking link 'xpath=/html/body/div[1]/div[1]/header/div[2]/div/div/div[3]/div[1]/div/div/div/div/a[1]'.</msg>
+<status status="PASS" endtime="20190827 19:59:00.613" starttime="20190827 19:58:57.481"></status>
 </kw>
-<status status="PASS" endtime="20190826 16:09:07.499" critical="yes" starttime="20190826 16:09:04.171"></status>
+<status status="PASS" endtime="20190827 19:59:00.613" critical="yes" starttime="20190827 19:58:57.470"></status>
 </test>
 <test id="s1-t3" name="3. ใส่ Email-Password">
 <kw name="Input Text" library="Selenium2Library">
@@ -31,8 +31,8 @@
 <arg>name=username</arg>
 <arg>buyer.toryod@gmail.com</arg>
 </arguments>
-<msg timestamp="20190826 16:09:07.508" level="INFO">Typing text 'buyer.toryod@gmail.com' into text field 'name=username'.</msg>
-<status status="PASS" endtime="20190826 16:09:07.659" starttime="20190826 16:09:07.508"></status>
+<msg timestamp="20190827 19:59:00.642" level="INFO">Typing text 'buyer.toryod@gmail.com' into text field 'name=username'.</msg>
+<status status="PASS" endtime="20190827 19:59:01.099" starttime="20190827 19:59:00.642"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -40,62 +40,78 @@
 <arg>name=password</arg>
 <arg>Aa111111</arg>
 </arguments>
-<msg timestamp="20190826 16:09:07.660" level="INFO">Typing text 'Aa111111' into text field 'name=password'.</msg>
-<status status="PASS" endtime="20190826 16:09:07.754" starttime="20190826 16:09:07.659"></status>
+<msg timestamp="20190827 19:59:01.101" level="INFO">Typing text 'Aa111111' into text field 'name=password'.</msg>
+<status status="PASS" endtime="20190827 19:59:01.388" starttime="20190827 19:59:01.101"></status>
 </kw>
-<status status="PASS" endtime="20190826 16:09:07.755" critical="yes" starttime="20190826 16:09:07.506"></status>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit</arg>
+</arguments>
+<msg timestamp="20190827 19:59:01.390" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" endtime="20190827 19:59:01.509" starttime="20190827 19:59:01.389"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit</arg>
+</arguments>
+<msg timestamp="20190827 19:59:01.511" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" endtime="20190827 19:59:01.765" starttime="20190827 19:59:01.510"></status>
+</kw>
+<status status="PASS" endtime="20190827 19:59:01.768" critical="yes" starttime="20190827 19:59:00.637"></status>
 </test>
-<test id="s1-t4" name="4. Click Submit button">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
+<test id="s1-t4" name="4. Search">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>id=submit</arg>
+<arg>//*[@id="search"]</arg>
 </arguments>
-<msg timestamp="20190826 16:09:07.766" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" endtime="20190826 16:09:07.880" starttime="20190826 16:09:07.765"></status>
+<status status="PASS" endtime="20190827 19:59:05.248" starttime="20190827 19:59:01.780"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=search</arg>
+<arg>วิตามิน</arg>
+</arguments>
+<msg timestamp="20190827 19:59:05.250" level="INFO">Typing text 'วิตามิน' into text field 'id=search'.</msg>
+<status status="PASS" endtime="20190827 19:59:05.402" starttime="20190827 19:59:05.249"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="search_mini_form"]/div[2]/button</arg>
+</arguments>
+<status status="PASS" endtime="20190827 19:59:05.438" starttime="20190827 19:59:05.403"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
-<arg>id=submit</arg>
+<arg>xpath=//*[@id="search_mini_form"]/div[2]/button/svg</arg>
 </arguments>
-<msg timestamp="20190826 16:09:07.882" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" endtime="20190826 16:09:08.115" starttime="20190826 16:09:07.881"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>id=submit</arg>
-</arguments>
-<msg timestamp="20190826 16:09:08.116" level="INFO">Clicking button 'id=submit'.</msg>
+<msg timestamp="20190827 19:59:05.440" level="INFO">Clicking button 'xpath=//*[@id="search_mini_form"]/div[2]/button/svg'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190826 16:09:08.537" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190826 16:09:08.538" starttime="20190826 16:09:08.159"></status>
+<msg timestamp="20190827 19:59:06.224" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190827 19:59:06.225" starttime="20190827 19:59:05.488"></status>
 </kw>
-<msg timestamp="20190826 16:09:08.541" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input class="btn btn-register default_action" id="submit" type="submit" value="เข้าสู่ระบบ"&gt; is not clickable at point (627, 570). Other element would receive the click: &lt;div class="blockUI blockOverlay" style="z-index: 999999; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(255, 255, 255); opacity: 0.616142; cursor: wait; position: fixed;"&gt;&lt;/div&gt;
-  (Session info: chrome=76.0.3809.100)
-</msg>
-<status status="FAIL" endtime="20190826 16:09:08.542" starttime="20190826 16:09:08.116"></status>
+<msg timestamp="20190827 19:59:06.227" level="FAIL">Button with locator 'xpath=//*[@id="search_mini_form"]/div[2]/button/svg' not found.</msg>
+<status status="FAIL" endtime="20190827 19:59:06.227" starttime="20190827 19:59:05.439"></status>
 </kw>
-<status status="FAIL" endtime="20190826 16:09:08.542" critical="yes" starttime="20190826 16:09:07.764">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input class="btn btn-register default_action" id="submit" type="submit" value="เข้าสู่ระบบ"&gt; is not clickable at point (627, 570). Other element would receive the click: &lt;div class="blockUI blockOverlay" style="z-index: 999999; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(255, 255, 255); opacity: 0.616142; cursor: wait; position: fixed;"&gt;&lt;/div&gt;
-  (Session info: chrome=76.0.3809.100)
-</status>
+<status status="FAIL" endtime="20190827 19:59:06.228" critical="yes" starttime="20190827 19:59:01.779">Button with locator 'xpath=//*[@id="search_mini_form"]/div[2]/button/svg' not found.</status>
 </test>
-<test id="s1-t5" name="5. Search Keyword">
-<status status="FAIL" endtime="20190826 16:09:08.566" critical="yes" starttime="20190826 16:09:08.552">Test case contains no keywords.</status>
-</test>
-<status status="FAIL" endtime="20190826 16:09:08.587" starttime="20190826 16:08:37.834"></status>
+<status status="FAIL" endtime="20190827 19:59:06.244" starttime="20190827 19:58:32.136"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="2" pass="3">Critical Tests</stat>
-<stat fail="2" pass="3">All Tests</stat>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="2" id="s1" name="Test" pass="3">Test</stat>
+<stat fail="1" id="s1" name="Test" pass="3">Test</stat>
 </suite>
 </statistics>
 <errors>
